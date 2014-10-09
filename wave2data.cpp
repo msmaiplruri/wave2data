@@ -1,6 +1,7 @@
 #include "wave2data.h"
 
 void showHelp() {
+    std::cout << "Arguments:" << std::endl;
     std::cout << "\t-h           \t" << "show help" << std::endl;
     std::cout << "\t-v           \t" << "show version" << std::endl;
     std::cout << "\t-f <filename>\t" << "set input filename" << std::endl;
@@ -13,6 +14,7 @@ bool setopts(int argc, char* argv[], std::string &fn, std::string &output) {
 
     fn = "";
     output = odef;
+    auto version = "wave2data 0.1.1";
 
     if (argc < 2) {
         return false;
@@ -26,7 +28,7 @@ bool setopts(int argc, char* argv[], std::string &fn, std::string &output) {
             break;
         case 'v':
             // version
-            std::cout << "wave2data 0.1" << std::endl;
+            std::cout << version << std::endl;
             break;
         case 'f':
             fn = std::string(optarg);
