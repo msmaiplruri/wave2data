@@ -1,7 +1,7 @@
 TARGET := wave2data
 
 CC := clang++
-CFLAGS := --std=c++11 -O2
+CFLAGS := --std=c++11 -stdlib=libc++ -O2
 
 SRC := $(shell ls *.cpp)
 HED := $(shell ls *.h)

@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     auto ret = setopts(argc, argv, fn, output);
 
     if (!ret) {
-        std::cout << "Arg: -f <filename>" <<  std::endl;
+        showHelp();
         return 0;
     } else if (fn.empty()) {
         return 0;
