@@ -14,7 +14,7 @@ bool setopts(int argc, char* argv[], std::string &fn, std::string &output) {
 
     fn = "";
     output = odef;
-    auto version = "wave2data 0.1.1";
+    auto version = "wave2data 0.1.2";
 
     if (argc < 2) {
         return false;
