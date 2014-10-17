@@ -6,6 +6,6 @@ Data Chank from WAVE file
 
 ## HowTo
 
-```Argument:
+Argument```
   <filename>	set input filename
  ```
