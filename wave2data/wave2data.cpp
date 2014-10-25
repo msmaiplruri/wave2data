@@ -86,7 +86,7 @@ HRESULT Wave2data::readData(char* ret)
 	count = mmioRead(this->hMmio, (HPSTR)ret, this->dataChunk.cksize);
 
 	if (count == -1) {
-		printf("Failed: mmioRead at getData()\n");
+		printf("Failed: 曲データ読み出し\n");
 		return E_FAIL;
 	}
 
