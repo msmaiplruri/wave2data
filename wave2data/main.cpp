@@ -1,6 +1,6 @@
 #include "wave2data.h"
 
-// Version: 0.1
+// Version: 0.1.1
 
 int main(int argc, char* argv[]) {
 
@@ -20,6 +20,8 @@ int main(int argc, char* argv[]) {
 	if (FAILED(w2d.Update(output.c_str()))) {
 		return 1;
 	}
+
+	w2d.writeLog(output.c_str());
 
 	return 0;
 }

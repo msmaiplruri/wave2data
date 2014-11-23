@@ -73,8 +73,6 @@ HRESULT Wave2data::Update(const char* output)
 
 	delete[] data;
 
-	this->writeLog(output);
-
 	return S_OK;
 }
 
@@ -105,4 +103,11 @@ void Wave2data::writeLog(const char* output) const
 {
 	printf("Data Size: %d\n", this->dataChunk.cksize);
 	printf("Output: %s\n", output);
+
+	char data[256] = {};
+	auto size = sprintf_s(data, sizeof(data), "[%s] Data Size: %d\n", output, this->dataChunk.cksize);
+	FILE* f;
+	fopen_s(&f, "log.txt", "a");
+	fwrite(data, sizeof(char), size, f);
+	fclose(f);
 }
